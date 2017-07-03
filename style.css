@@ -1,0 +1,128 @@
+body,h1{
+  margin: 0;
+}
+body,html{
+  height: 100%;
+}
+
+/* HEADER */
+header{
+  background-color: black;
+  text-align: center;
+  box-shadow: 0px 1px 10px black;
+  position: relative;
+  z-index: 1
+}
+header h1{
+  padding: 8px;
+  color: white;
+  font-family: "Amatica SC", sans-serif;
+  font-size: 45px;
+  text-decoration: none;
+  z-index: 1;
+  display: block;
+}
+
+/* LINKS E NAVIGATION BAR*/
+header li{
+  list-style: none;
+  display: inline-block;
+  font-family: "Special Elite", cursive;
+  border-bottom: 3px solid transparent;
+  margin: 0 1em;
+}
+header ul {
+  padding-left: 0;
+  padding-top: 0.25em;
+  background-color: rgba(255, 165, 0, 0.86);
+  margin-bottom: 0;
+}
+header a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+/*principal*/
+  #principal{
+    margin: 0 auto;
+    border: 10px groove orange;
+    border-top: 1px solid transparent;
+    /*background-color: rgba(255, 185, 0, 0.72);*/
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    position: relative;
+    bottom: 850px;
+    transition: 0.5s linear;
+  }
+  #principal p{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #principal h2{
+    font-family: 'open sans',sans-serif;
+  }
+
+  /* IMAGENS */
+ main{
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+  }
+  #inicial{
+    background-image: url(imgs/fundo/guy-forest-green.jpg);
+  }
+  #vulcao{
+    background-image: url(imgs/fundo/guy-forest-yellow.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+  }
+
+  .direita{
+    float: right;
+    margin: 5px;
+  }
+  .esquerda{
+      float: left;
+      margin: 5px;
+  }
+  .vermelho{
+    color: red;
+  }
+
+#voltar-topo {
+  background-color: white;
+  border-radius: 20%;
+  border: 2px solid silver;
+  font-size: 35px;
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-decoration: none;
+      /*aula*/
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+#voltar-topo::before {
+  content: "↑";
+  /* por algum motivo,a setinha tinha ficado
+  com um contorno (no próprio caractere),então
+  eu mudei para outro*/
+  display: inline;
+      /*aula*/
+  position: relative;
+  bottom: 3px;
+}
+
+section{
+  width: 600px;
+  margin: 0 auto;
+}
+a:active{
+  position: relative;
+  top: 1px;
+}
