@@ -2,12 +2,15 @@ let principal = document.querySelector('#principal')
 	hyperlink = document.querySelectorAll('a');
 
 for (var i = 0; i < hyperlink.length; i++) {
-	hyperlink[i].addEventListener('click',sobe);
+		hyperlink[i].addEventListener('click',move);
 }
-function sobe(){
-	principal.style.bottom = principal.offsetHeight + 'px';
+function move(){
+	if(principal.style.bottom ==0 + 'px'){
+		principal.style.bottom = principal.offsetHeight + 'px';
+		console.log("sooobe");
+	} else{
+		principal.style.bottom = 0 + 'px';
+		console.log("ciima");
+	}
 }
-function desce(){
-	principal.style.bottom = 0 + 'px';
-}
-window.onload = desce;
+window.onload = move;
