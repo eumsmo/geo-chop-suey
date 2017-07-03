@@ -80,12 +80,17 @@ header a{
     background-position: center center;
     height: 100%;
   }
-  #tectonismo{
+  #primeira-pag{
+    background-image: url(imgs/fundo/lake.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+ #tectonismo{
     background-image: url(imgs/fundo/forest-anoitecer-vigia.jpg);
     background-size: cover;
     background-position: center center;
     height: 100%;
-
   }
 
   .direita{
@@ -138,4 +143,34 @@ section{
 a:active{
   position: relative;
   top: 1px;
+}
+
+img.pagina-principal{
+  border-radius: 50%;
+  width: 319px;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition: cubic-bezier(0.55, 0.06, 0.68, 0.19) 0.1s;
+}
+.conteudo:hover h1{
+  opacity: 1;
+} 
+li.conteudo{
+  position: absolute;
+  top: 50%;
+  margin-top: -159.5px;
+  left: 50%;
+  margin-left: -159.5px;
+  list-style: none;
+  
+}
+li.conteudo h1{
+  text-align: center;
+  font-family: "Amatica SC", sans-serif;
+  font-size: 50px;
+  color: white;
+  transition: linear 0.2s;
+  opacity: 0;
 }
