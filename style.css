@@ -58,6 +58,8 @@ header a{
   #principal p{
     margin-left: 20px;
     margin-right: 20px;
+    text-align: justify;
+    font-family: 'Jomhuria'
   }
   #principal h2{
     font-family: 'open sans',sans-serif;
@@ -78,6 +80,13 @@ header a{
     background-position: center center;
     height: 100%;
   }
+  #tectonismo{
+    background-image: url(imgs/fundo/forest-anoitecer-vigia.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+
+  }
 
   .direita{
     float: right;
@@ -89,6 +98,10 @@ header a{
   }
   .vermelho{
     color: red;
+  }
+  .negrito{
+    font-weight: bold;
+
   }
 
 #voltar-topo {
