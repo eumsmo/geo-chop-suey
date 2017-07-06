@@ -116,3 +116,7 @@ nav ul{
 nav ul li{
 	display: inline-block;
 }
+iframe{display:block;}
+#center{
+	margin: 0 auto;
+}
