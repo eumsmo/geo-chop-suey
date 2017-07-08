@@ -1,5 +1,6 @@
 html,body{
 	min-height: 100%;
+	zoom: 90%;
 }
 #pag-principal{
 	background-image: url(imgs/fundo/lake.jpg);
