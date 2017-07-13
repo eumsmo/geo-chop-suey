@@ -56,12 +56,24 @@ html,body{
 		margin: 2.5em auto;
 		clear: both;
 	}
-	img#vulcao-explicado{
+	#vulcao-explicado img{
 		border-radius: 50px;
  		width: 319px; 
-  		float: right;
+  		
+	}
+	#vulcao-explicado{
+		float: right;
  		padding: 2.5em;
 	}
+	#vulcao-explicado button{
+		display: block;
+   	    margin: 0 auto;
+   	    width: 159.5px;
+   	    height: 2em;
+   	    font-family: 'Source Code Pro',monospace;
+   	    font-weight: bold;
+	}
+
 #tectonismo{
 	background-image: url(imgs/fundo/green-forest.jpg);
 	background-size: cover;
