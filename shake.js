@@ -156,6 +156,11 @@ window.onload = configuracoes;
 /* FUNÇÃO QUE SALVA OS VALORES*/
 function configuracoes(){
   x = document.querySelector('#intensidade').value;
+  if(x>13){
+    x=13;
+  } else if(x<0){
+    x=0;
+  }
   aleatorio = document.querySelector('#aleatorios').checked;
 }
 
@@ -172,10 +177,12 @@ let botaoEl = document.querySelector('#configurarT'),
 /* SWITCH ENTRE APARECE E NÃO APARECE */
 botaoEl.addEventListener('click',function(){
     if(aparece){
+      botaoEl.innerHTML = " - Configurações";
       aparece = false;
       imagemEl.style.left = "-400px";
       imagemEl.style.opacity = "0";
     } else{
+      botaoEl.innerHTML = " + Configurações";
       aparece = true;
       imagemEl.style.left= "0";
       imagemEl.style.opacity = "1";

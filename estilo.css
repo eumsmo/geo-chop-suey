@@ -103,7 +103,7 @@ section{
 		margin-bottom: 10px;
 		text-align: center;
 	}
-	ol.fonte-bonita,ul.fonte-bonita{
+	ol.fonte-bonita,ul.fonte-bonita,dl.fonte-bonita{
 		font-size: 1.5em;
 	}
 
@@ -111,11 +111,6 @@ section{
 	background-image: url(imgs/fundo/forest1.jpg);
 	background-size: cover;
 }
-#centralizado{
-	text-align: center;
-	margin: 0 auto;
-}
-iframe{display:block;}
 #center{
 	margin: 0 auto;
 	clear: both;
@@ -216,3 +211,27 @@ input[type = "number"]{
 	left: 0;
 }
 #configurar{position: relative;}
+
+#videoh{
+	clear: both;
+	padding: auto;
+	width: 600px;
+	background-color: #440000;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+ #videoh h2{margin-bottom: 0;}
+#video{
+	padding: 20px;
+	margin: 0 auto;
+	width:560px; 
+	height:315px;
+}
+dt{font-weight: bold;}
+
+#partes-vulcao dt,#partes-vulcao dd{
+	display: inline;
+}
+#partes-vulcao dd{
+	-webkit-margin-start: 10px;
+}
