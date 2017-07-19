@@ -1,10 +1,12 @@
 html,body{
 	min-height: 100%;
 	zoom: 90%;
+	margin: 0;
 }
-#pag-principal{
+#pag-principal::before{
 	background-image: url(imgs/fundo/lake.jpg);
 	background-size: cover;
+	filter: brightness(100%);
 }
 	li.principal-botao{
 		display: inline-block;
@@ -39,7 +41,7 @@ html,body{
 		font-size: 100px;
 	}
 
-#vulcao{
+#vulcao::before{
 	background-image: url(imgs/fundo/yellow-forest.jpg);
 	background-size: cover;
 }
@@ -51,32 +53,22 @@ html,body{
 		width: 319px;
 		padding: 2em;
 	}
-	main{
-		width: 1100px;
-		margin: 2.5em auto;
-		clear: both;
-	}
-	#vulcao-explicado img{
-		border-radius: 50px;
- 		width: 319px; 
-  		
-	}
 	#vulcao-explicado{
 		float: right;
  		padding: 2.5em;
 	}
-	#vulcao-explicado button{
-		display: block;
-   	    margin: 0 auto;
-   	    width: 159.5px;
-   	    height: 2em;
-   	    font-family: 'Source Code Pro',monospace;
-   	    font-weight: bold;
-	}
 
-#tectonismo{
+#tectonismo::before{
 	background-image: url(imgs/fundo/green-forest.jpg);
 	background-size: cover;
+}
+main{
+	width: 1100px;
+	margin: 0 auto;
+	clear: both;
+}
+section{
+	margin: 2.5em auto;
 }
 h1{
 	margin: 0;
@@ -87,11 +79,12 @@ h1{
 .f-left{
 	float:left;
 }
-p{
+p,nav ul li a{
 	font-family: 'Source Code Pro',monospace;
   	font-size: 20px;
   	color :white;
   	margin:0;
+  	text-decoration: none;
 }
 section{
 	width: 700px;
@@ -114,7 +107,7 @@ section{
 		font-size: 1.5em;
 	}
 
-#creditos{
+#creditos::before{
 	background-image: url(imgs/fundo/forest1.jpg);
 	background-size: cover;
 }
@@ -122,15 +115,104 @@ section{
 	text-align: center;
 	margin: 0 auto;
 }
-nav ul{
-	width: 100%;
-
-}
-nav ul li{
-	display: inline-block;
-}
 iframe{display:block;}
 #center{
 	margin: 0 auto;
 	clear: both;
 }
+
+
+/*
+	ADICIONADO APÓS REVISÃO DO DEUS COUTINHO , vulgo Fegemo
+*/
+
+nav{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+nav ul{padding: 0 1em;margin: 0;}
+nav ul img{
+	border-radius: 50%;
+	width: 50px;
+	position: relative;
+	bottom: 12.5px;
+	float: left;
+	margin-right: 10px;
+	opacity: 0.5;
+}
+nav ul li a{
+	float: left;
+	clear: both;
+	margin-bottom: 1em;
+}
+nav ul li{
+	clear: both;
+	width: 180px;
+	list-style: none;
+}
+nav ul li:hover span,nav ul li:hover img{
+	opacity: 1;
+}
+
+nav ul li span{
+	opacity: 0;
+	transition: linear 0.25s;
+}
+
+
+/*
+
+	JÁ QUE MINHAS IMAGENS LINDAS ERAM MUITO CLARAS E DEIXAVAM O TEXTO
+	DE MANEIRA ILEGIVEL, ADICIONADO DESSA MANEIRA, É POSSIVEL USAR
+	UM RECURSO CSS 'filter' QUE PERMITE DIMINUIR O BRILHO!
+
+*/
+body::before{
+	 content: "";
+ 	position: fixed;
+  	left: 0;
+ 	 right: 0;
+ 	 z-index: -1;
+ 	 min-width: 100%;
+ 	 min-height:100%;
+  
+ 	 display: block;
+	filter: brightness(80%);
+}
+#configurar{
+	clear:both;
+	text-align: center;
+	font-size: 1.5em;
+	width: 319px;
+	height: 330px;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+	border-radius: 25px;
+	color: black;
+}
+input[type = "number"]{
+	height: 1.25em;
+	width: 3.25em;
+}
+
+	button{
+		display: block;
+   	    margin: 10px auto;
+   	    font-family: 'Source Code Pro',monospace;
+   	    font-size: 0.8em;
+	}
+
+#vulcao-explicado button{width: 159.5px;height: 2em;}
+
+#vulcao-explicado img{
+	border-radius: 25px;
+ 	width: 319px; 		
+}
+
+#tectonismo #vulcao-explicado img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#configurar{position: relative;}

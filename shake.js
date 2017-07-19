@@ -6,23 +6,30 @@
     link: https://stackoverflow.com/questions/36962903/javascript-shake-html-element
 */
 
+var randomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 var shakingElements = [];
 
 var shake = function (element, magnitude = 16, angular = false) {
+
+  if(dobotao){
+    console.log("Terremoto chamado do botão!");
+    dobotao = false;
+  }else if(!aleatorio){
+    console.log("Não dessa vez, meu chapa!");
+    return;
+  }
+
   //First set the initial tilt angle to the right (+1) 
   var tiltAngle = 1;
 
   //A counter to count the number of shakes
   var counter = 1;
 
-  //The `randomInt` helper function
-  var randomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
-
   //The total number of shakes (there will be 1 shake per frame)
-  var numberOfShakes = randomInt(30,250);
+  var numberOfShakes = randomInt((x/2)*100,x*100);
 
   //Capture the element's position and angle so you can
   //restore them after the shaking has finished
@@ -119,10 +126,58 @@ var shake = function (element, magnitude = 16, angular = false) {
 
 };
 
-document.querySelector('button').addEventListener('click', (e) => {
-  shake(document.querySelector("main"));
+/* 
+    PARTE ADICIONADA E MODIFICADA COM INTUITOS DE MELHOR CONTROLE 
+    QUERIA DIZER ND NÃO MAS FOI DIFICIL RSRS 
+*/
+
+let x = 1,
+    aleatorio = true,
+    dobotao = false;
+
+/* A FUNÇÃO SERÁ CHAMADA A CADA X TEMPOS*/
+setInterval(treme,randomInt(10,30)*1000);
+
+/* SE CLICAR EM TERREMOTO , A FUNÇÃO IRÁ INICIAR */
+document.querySelector('#treme').addEventListener('click',function(){
+  dobotao = true;
+  treme();
 });
 
+/* FUNÇÃO QUE CHAMA A FUNÇÃO SHAKE*/
+function treme(){
+  shake(document.querySelector("main"));
+}
+
+/* SALVAR OS VALORES UTILIZADOS NAS CONFIGURAÇÕES (inicia no Load) */
+document.querySelector('#salvar').addEventListener('click',configuracoes);
+window.onload = configuracoes;
+
+/* FUNÇÃO QUE SALVA OS VALORES*/
+function configuracoes(){
+  x = document.querySelector('#intensidade').value;
+  aleatorio = document.querySelector('#aleatorios').checked;
+}
 
 
 
+/* 
+    CONFIGURAÇÃO
+*/
+
+
+let botaoEl = document.querySelector('#configurarT'),
+    imagemEl = document.querySelector('#some'),
+    aparece = true;
+/* SWITCH ENTRE APARECE E NÃO APARECE */
+botaoEl.addEventListener('click',function(){
+    if(aparece){
+      aparece = false;
+      imagemEl.style.left = "-400px";
+      imagemEl.style.opacity = "0";
+    } else{
+      aparece = true;
+      imagemEl.style.left= "0";
+      imagemEl.style.opacity = "1";
+    }
+});

@@ -6,10 +6,16 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Special+Elite|Amatica+SC" rel="stylesheet">
 	</head>
 	<body id="tectonismo"> 
-		<main>
-			
 
-					
+			<nav>
+				<ul>
+					<li><a href="vulcanismo.html"><img src="imgs/volcano.jpg"><span>Vulcanismo</span></a></li>
+					<li><a href="index.html"><img src="imgs/seu_lixo.jpg"><span>Inicial</span></a></li>
+					<li><a href="creditos.html"><img src="imgs/vulcao.jpg"><span>Créditos</span></a></li>
+				</ul>
+			</nav>
+
+		<main>		
 			 <section class="f-right">
 			 	<h2 class="fonte-bonita">O que ser esse tal de "tectonismo"?</h2>
 			 	<p>&nbsp;&nbsp;Sismo, também chamado de abalo sísmico, tremor de terra, terremoto ou terramoto, é o resultado de uma súbita liberação de energia na crosta do planeta Terra, geralmente por conta do choque entre placas tectônicas, o que cria ondas sísmicas.<br>
@@ -31,12 +37,24 @@
 			 	</ul>
 			 </section>
 			 <div id="vulcao-explicado">
-			 	<img src="imgs/movimento-das-placas-tectonicas.jpg">
-			 	<button>Terremoto!</button>
-			 </div>
 			 
+			 	<div id="configurar" class="fonte-bonita">
+			 	<img id="some" src="imgs/movimento-das-placas-tectonicas.jpg">
+					<h2>Configurar</h2>
+					<label for="aleatorios">Terremotos Aleatórios: </label>
+					<input type="checkbox" id="aleatorios" checked="true">
+					<label for="intensidade">Intensidade/Tempo dos Terremotos: </label>
+					<input type="number" id="intensidade" min="1" max="13" value="2">
+					<button id="salvar">Salvar</button>
+					<button id="treme">Terremoto!</button>
+				</div>
+			 	<button id="configurarT">Configurações</button>
+			 </div>
 
 		</main>
+
+		
+
 		<script src="shake.js"></script>
 
 	</body>
