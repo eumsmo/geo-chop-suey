@@ -235,3 +235,11 @@ dt{font-weight: bold;}
 #partes-vulcao dd{
 	-webkit-margin-start: 10px;
 }
+#configurar h2{
+	margin: 0 auto; 
+}
+button#configurarT,button#treme{
+	display: inline-block;
+	width: 132px;
+}
+#botoes{text-align: center;}
