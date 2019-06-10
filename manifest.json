@@ -1,0 +1,13 @@
+{
+	"short_name": "Geo. Fisica",
+	"name": "Geo-Chop-Suey",
+	"icons": [
+	 {
+    	"src": "imgs/vulcao.jpg",
+    	"type": "image/jpg",
+    	"sizes": "128x128"
+  	}],
+  	"start_url": "index.html",
+  	"background_color": "#3faabc",
+  	"display": "standalone"
+}
